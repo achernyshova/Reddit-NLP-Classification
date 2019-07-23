@@ -1,14 +1,17 @@
-# Project 3. Reddit Classification with NLP (Dogs vs. Dogfree)
+# Reddit Classification with NLP (Dogs vs. Dogfree)
 
 
 ## Problem Statement
 
-The main goal for this project collecting data by scraping Reddit website and then building a binary classifier to identify where a given post came from. <br>
+The main goal of this project is collecting data by scraping Reddit website and then building a binary classifier to identify where a given post came from. <br>
 For the project I chose highly correlated subreddits:
 - Dog lovers subreddit - Dogs https://www.reddit.com/r/dogs/
 - Dog haters subreddit - Dogfree https://www.reddit.com/r/Dogfree
 
 This model could be used for identifying dog lovers and dog haters based on their posts in different social networks and websites and offer them target ads.
+
+![alt text](https://github.com/achernyshova/Reddit-NLP-Classification/blob/master/images/words.png)
+
 
 ## Dataset
  - Data was gathered from Reddit's API, using the Python requests library. Reddit's API returns a JSON file with the page’s content. Collection was automated using AWS and Cron.
@@ -45,8 +48,3 @@ The project will do the following parts:
 ## Conclusions and findings
 In spite of the fact that I chose highly correlated subreddits all three models (Logistic Regression, Naive Bayes and Random Forest) showed at least 1.7x better accuracy score than the baseline.
 The best model is Logistic Regression, we can predict with an accuracy of about 95.4% where a given post came from, 19 out of 20 posts.
-
-
-## Next steps
-Further improvements for the model includes:
-- better work with hyperparameters to reduce overfitting for Random Forest Classifier
